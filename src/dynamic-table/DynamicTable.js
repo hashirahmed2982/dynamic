@@ -1,8 +1,10 @@
 
-import TableData from "./TableData";
+//import TableData from "./TableData";
 import { Table } from "react-bootstrap";
-function DynamicTable(){
+function DynamicTable ({TableData}) {
 
+
+  
 // get table column
  const column = Object.keys(TableData[0]);
 
@@ -10,19 +12,20 @@ function DynamicTable(){
  const ThData =()=>{
     
      return column.map((data)=>{
-         return <th className="col-wrapper" key={data}>{data}</th>
+         return <th  key={data}>{data.toUpperCase()}</th>
      })
  }
 
 // get table row data
-const tdData =() =>{
+const tdData = () =>{
+  
    
      return TableData.map((data)=>{
        return(
-           <tr>
+           <tr >
                 {
                    column.map((v)=>{
-                       return <td >{data[v]}</td>
+                       return <td  >{data[v]}</td>
                    })
                 }
            </tr>

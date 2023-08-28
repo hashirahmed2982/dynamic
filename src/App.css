@@ -21,7 +21,8 @@
   max-width: 1500px;
   }
   .col-wrapper {
-    max-width: 100px;
+    max-width: 20px;
+    min-width: 20px;
     }
   
   .edit-link {
